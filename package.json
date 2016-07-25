@@ -1,0 +1,35 @@
+{
+  "name": "lv-devops",
+  "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "alexa-traffic-rank": "~1.0.1",
+    "async": "^2.0.0-rc.4",
+    "bayes-classifier": "0.0.3",
+    "bcryptjs": "^2.1.0",
+    "body-parser": "^1.13.1",
+    "cheerio": "~0.20.0",
+    "colors": "^1.1.2",
+    "compression": "~1.6.1",
+    "cors": "^2.7.1",
+    "cron": "^1.1.0",
+    "crunchbase": "~0.1.2",
+    "crunchbase2": "~1.0.0",
+    "express": "^4.13.0",
+    "google-play-scraper": "~0.3.0",
+    "http": "0.0.0",
+    "jwt-simple": "^0.3.0",
+    "linkedin-scraper2": "^2.0.0",
+    "moment": "^2.10.3",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.0",
+    "node-kmeans": "^1.0.0",
+    "phantom": "^2.1.12",
+    "request": "^2.58.0",
+    "twitter-node-client": "0.0.6",
+    "x-ray": "^2.3.0"
+  }
+}
