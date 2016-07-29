@@ -1,8 +1,8 @@
 <div class="main_container">
-  <div class="col-md-3 left_col">
+  <div class="col-md-3 left_col" ng-controller="NavCtrl as vm">
     <div class="left_col scroll-view">
       <div class="navbar nav_title" style="border: 0;">
-        <a ui-sref="home" class="site_title"><i class="fa fa-paw"></i> <span>Admin </span></a>
+        <a ui-sref="home" class="site_title"><i class="fa fa-paw"></i> <span>Wrench </span></a>
       </div>
 
       <div class="clearfix"></div>
@@ -10,11 +10,11 @@
       <!-- menu profile quick info -->
       <div class="profile">
         <div class="profile_pic">
-          <img src="http://placehold.it/50x50" alt="..." class="img-circle profile_img">
+          <img ng-src="{{vm.profile.picture}}" alt="..." class="img-circle profile_img">
         </div>
         <div class="profile_info">
           <span>Welcome,</span>
-          <h2>John Doe</h2>
+          <h2>{{vm.profile.displayName}}</h2>
         </div>
       </div>
       <!-- /menu profile quick info -->
@@ -24,7 +24,7 @@
       <!-- sidebar menu -->
       <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
         <div class="menu_section">
-          <h3>General</h3>
+          <h3>&emsp;</h3>
           <ul class="nav side-menu">
             <li>
               <a ui-sref="home">
@@ -122,7 +122,7 @@
 
       </div>
       <!-- /sidebar menu -->
-
+      
       <!-- /menu footer buttons -->
       <div class="sidebar-footer hidden-small">
         <a data-toggle="tooltip" data-placement="top" title="Settings">
@@ -134,7 +134,7 @@
         <a data-toggle="tooltip" data-placement="top" title="Lock">
           <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Logout">
+        <a ng-if="vm.isAuthenticated()" data-toggle="tooltip" data-placement="top" title="Logout" href="/#/logout">
           <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
         </a>
       </div>
@@ -143,7 +143,7 @@
   </div>
 
   <!-- top navigation -->
-  <div class="top_nav">
+  <div class="top_nav" ng-controller="NavCtrl as vm">
     <div class="nav_menu">
       <nav>
         <div class="nav toggle">
@@ -153,7 +153,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="">
             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <img src="http://placehold.it/50x50" alt="">John Doe
+              <img ng-src="{{vm.profile.picture}}" alt="">{{vm.profile.displayName}}
               <span class=" fa fa-angle-down"></span>
             </a>
             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -165,39 +165,10 @@
                 </a>
               </li>
               <li><a href="javascript:;">Help</a></li>
-              <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+              <li><a href="/#/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
             </ul>
           </li>
 
-          <li role="presentation" class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-              <i class="fa fa-envelope-o"></i>
-              <span class="badge bg-green">6</span>
-            </a>
-            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-              <li>
-                <a>
-                  <span class="image"><img src="http://placehold.it/50x50" alt="Profile Image" /></span>
-                  <span>
-                    <span>John Smith</span>
-                    <span class="time">3 mins ago</span>
-                  </span>
-                  <span class="message">
-                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                  </span>
-                </a>
-              </li>
-              
-              <li>
-                <div class="text-center">
-                  <a>
-                    <strong>See All Alerts</strong>
-                    <i class="fa fa-angle-right"></i>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
     </div>

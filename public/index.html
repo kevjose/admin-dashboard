@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Admin Template</title>
+    <title>Letsventure</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="stylesheets/angular-toastr.css" rel="stylesheet">
     
 
     <!-- Custom Theme Style -->
@@ -22,7 +23,7 @@
 
   <body class="nav-md">
     <div class="container body" ng-app="MyApp">
-      <div ui-view></div>
+      <div ui-view ng-cloak></div>
     </div>
 
     <!-- jQuery -->
@@ -50,8 +51,12 @@
     <script src="app.js"></script>
 
     <script src="controllers/dashboard.controller.js"></script>
+    <script src="controllers/navigation.controller.js"></script>
     <script src="controllers/profile.controller.js"></script>
     <script src="controllers/home.controller.js"></script>
+    <script src="controllers/logout.controller.js"></script>
+
+    <script src="services/user.service.js"></script>
 
   </body>
 </html>

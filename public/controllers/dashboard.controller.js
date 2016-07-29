@@ -5,10 +5,9 @@
     .module('MyApp')
     .controller('DashboardCtrl', DashboardCtrl);
 
-  //DashboardCtrl.$inject = ['DashboardService'];
+  DashboardCtrl.$inject = [];
   function DashboardCtrl() {
     var vm = this;
-    
     vm.initialise = initialise;
       
     /////////////////////////////

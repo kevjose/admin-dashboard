@@ -27,6 +27,7 @@
     "mongoose": "^4.0.6",
     "morgan": "^1.6.0",
     "node-kmeans": "^1.0.0",
+    "node-slack": "0.0.7",
     "phantom": "^2.1.12",
     "request": "^2.58.0",
     "twitter-node-client": "0.0.6",
